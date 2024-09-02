@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Binary Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Binary Classification or Regression of Exam Scores</h1>
+        <hr>
+        <div class="settings-section">
+            <h2>Training Settings</h2>
+            <label for="learning-rate">Learning Rate:</label>
+            <input type="number" id="learning-rate" name="learning-rate" step="0.01">
+            <label for="epochs">Max Epochs:</label>
+            <input type="number" id="epochs" name="epochs">
+            <label for="goal">Goal:</label>
+            <select id="goal" name="goal">
+                <option value="classification">Classification</option>
+                <option value="regression">Regression</option>
+            </select>
+            <label for="activation-function">Activation Function:</label>
+            <select id="activation-function" name="activation-function">
+                <option value="sigmoid">Sigmoid</option>
+                <option value="relu">ReLU</option>
+                <option value="tanh">Tanh</option>
+            </select>
+            <label for="hidden-neurons">Hidden Neurons:</label>
+            <input type="number" id="hidden-neurons" name="hidden-neurons">
+            <label for="file-upload">Upload Dataset:</label>
+            <input type="file" id="file-upload" name="file-upload" accept=".json,.csv,.txt">
+            <p>Instructions: The dataset should be in JSON, CSV, or TXT format with comma-separated values.</p>
+        </div>
+        <button onclick="trainModel()">Train Model</button>
+
+        <div class="test-section">
+            <h2>Test Model with New Data</h2>
+            <label for="test-math">Math:</label>
+            <input type="number" id="test-math" name="test-math">
+            <label for="test-science">Science:</label>
+            <input type="number" id="test-science" name="test-science">
+            <label for="test-english">English:</label>
+            <input type="number" id="test-english" name="test-english">
+            <button onclick="testModel()">Test Model</button>
+        </div>
+        
+        <button onclick="clearForm()">Clear and Restart</button>
+        
+        <div id="performance"></div>
+        <div id="result"></div>
+        <div id="accuracy" class="accuracy"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

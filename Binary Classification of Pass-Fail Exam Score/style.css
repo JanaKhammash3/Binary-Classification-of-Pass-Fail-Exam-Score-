@@ -1,0 +1,94 @@
+/* styles.css */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #b0b4f1, #ffffff), url('img1.jpg');
+    background-size: cover; 
+    background-blend-mode: overlay; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 215vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 430px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #3f1996;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.input-section, .settings-section, .test-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #666666;
+}
+
+input, select {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+button {
+    width: 101%;
+    padding: 14px;
+    background: linear-gradient(to right, #82b4e9, #500fc9);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #004494);
+    transform: translateY(-2px);
+}
+
+#performance, #result {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+}
+
+.accuracy {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f1996;
+    text-align: center;
+    margin-top: 10px;
+}
